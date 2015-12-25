@@ -3,7 +3,7 @@
 Head Banging Music Player：Sample App for J!NS MEME on iOS  
 Using JINS MEME SDK version 1.0.5.
 
-JINS MEME Advent Calendar 2015 25日目
+JINS MEME Advent Calendar 2015 25日目  
 http://qiita.com/tstnn/items/0fec0ae6fc57858b7a38
 
 ## Requirements
