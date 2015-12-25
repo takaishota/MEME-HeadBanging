@@ -15,7 +15,7 @@ http://qiita.com/tstnn/items/0fec0ae6fc57858b7a38
 
 ##Contents
 
-<img src="https://raw.githubusercontent.com/manchan/JinsMeme-Swift-Sample/master/ResourcesForREADME/meme2.gif" align="left" hspace="1">
+
 
 
 <br clear="both">
