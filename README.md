@@ -18,7 +18,7 @@ http://qiita.com/tstnn/items/0fec0ae6fc57858b7a38
 
 頭の振り（ヘッドバンギング）に応じて再生速度や音量が変化する音楽プレーヤーアプリです。  
 
-<img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_4001_1024.jpg" width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_3999_1024.jpg" width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_3998_1024.jpg"  width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_3996_1024.jpg"  width="22%" align="left" hspace="1">
+<img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_4001_1024.jpg" width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_3999_1024.jpg" width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/thumb_IMG_3998_1024.jpg"  width="22%" align="left" hspace="1"><img src="https://github.com/takaishota/MEME-HeadBanging/blob/master/ResourcesForREADME/sample.gif"  width="22%" align="left" hspace="1">
 
 
 <br clear="both">
