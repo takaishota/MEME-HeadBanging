@@ -81,6 +81,48 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
         }
     }
     
+    var dRate: Float = 0.1
+    var signChangeCount: Int = 0
+    var newSignChangeCount: Int = 0
+    var accYValue: Int8 = 0 {
+        willSet {
+            // 1秒間(20Hz)の上下往復の頻度を計測する
+            if count >= realTimeDataFrequency {
+                if self.audioPlayer != nil {
+                    
+                    // 往復頻度（加速度 > 0 <-> 加速度 < 0 への切り替わり回数）が増えていたら再生速度を早くする
+                    if newSignChangeCount > signChangeCount {
+                        self.audioPlayer?.rate += dRate * Float(newSignChangeCount - signChangeCount)
+                        
+                    } else if newSignChangeCount < signChangeCount {
+                        self.audioPlayer?.rate -= dRate * Float(signChangeCount - newSignChangeCount)
+                        
+                    }
+//                    print(NSString(format: "Rate: %0.3f", self.audioPlayer!.rate))
+                    signChangeCount = newSignChangeCount
+                    newSignChangeCount = 0
+                }
+            }
+            
+            if isPlus(newValue) != isPlus(accYValue) {
+                newSignChangeCount += 1
+            }
+        }
+    }
+    
+    func isPlus(value : Int8) -> Bool {
+        var r: Bool
+        
+        if value > 0 {
+            r = true
+            
+        } else {
+            r = false
+            
+        }
+        return r
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,6 +180,7 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
             self.accY.text = NSString(format: "accY: %d", (data.accY)) as String
             
             self.pitchValue = data.pitch
+            self.accYValue = data.accY
         }
     }
     
