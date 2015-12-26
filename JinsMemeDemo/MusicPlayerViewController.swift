@@ -177,7 +177,7 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
     
     func reloadData(data: MEMERealTimeData) {
         if data as MEMERealTimeData? != nil {
-            // pitchの値を頭の振りの判定に使う
+            // pitchの値を頭の振りの判定に、accYを頭の上下動の判定に使う
             self.pitch.text =  NSString(format: "pitch: %.2f", (data.pitch)) as String
             self.accY.text = NSString(format: "accY: %d", (data.accY)) as String
             
