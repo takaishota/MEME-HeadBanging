@@ -39,6 +39,7 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
     var pitchValue:Float = 0 {
         willSet {
             
+            // 曲の開始/一時停止
             if pitchValue > 0 && abs(newValue - pitchValue) > 2 && self.audioPlayer?.prepareToPlay() == true {
                 // 曲が選択されているか、一時停止状態で頭を振ると曲が開始する
                 self.didStartSwingingHead()
@@ -47,7 +48,7 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
                     self.audioPlayer?.play()
                 }
                 
-            } else if self.modalView != nil && abs(newValue - pitchValue) < 0.03 {
+            } else if self.modalView != nil && abs(newValue - pitchValue) < 0.02 {
                 // Swingが止まったら、モーダルビューを閉じる
                 self.modalView!.dismissViewControllerAnimated(true, completion: {self.modalView = nil})
                 self.audioPlayer?.pause()
@@ -57,6 +58,7 @@ class MusicPlayerViewController: UIViewController, MPMediaPickerControllerDelega
                 
             }
             
+            // 音量の変更
             if count >= realTimeDataFrequency {
                 // 1秒間（20Hz）の最大値/最小値から音量を決める（0〜1.0の間で0.125ずつの10段階）
                 if self.audioPlayer != nil {
